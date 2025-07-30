@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ARRAY IMPLEMENTATION</title>
+<script>
+	var arr=[100,200,300,400];
+	document.write(arr);
+	document.write("<br/>");
+	document.write(typeof arr);
+	document.write("<br/>");
+	//ADD THE ELEMENT TO LAST POSITION
+	arr.push(500);
+	document.write(arr);
+	document.write("<br/>");
+	//DELETE FROM THE LAST ELEMENT;
+	arr.pop();
+	document.write(arr);
+	document.write("<br/>");
+	//ADD THE ELEMENT IN FIRST POSITION
+	arr.unshift(50);
+	document.write(arr);
+	document.write("<br/>");
+	//DELETE THE ITEM FROM FIRST POSITION
+	arr.shift();
+	document.write(arr);
+	document.write("<br/>");
+	//DELETE FROM SPECIFIC POSITION
+	arr.splice(2,1);
+	document.write(arr);
+	document.write("<br/>");
+	//ADD A ITEM IN SPECIFIC POSITION
+	arr.splice(2,0,300);
+	document.write(arr);
+	document.write("<br/>");
+	//FOREACH METHOD
+	arr.forEach(function(element,index){
+		document.write(index,element);
+		document.write("<br/>");
+	})
+	//MAP FUNCTION
+	var newarray=arr.map(function(element,index){
+		return element*10;
+	})
+	document.write(newarray);
+	document.write("<br/>");
+	//FILTER FUNCTION
+	var newarray1=arr.filter(function(element,index){
+		return element>200;
+	})
+	document.write(newarray1);
+	document.write("<br/>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

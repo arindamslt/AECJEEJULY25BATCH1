@@ -82,6 +82,68 @@ ELEMENT OF HTML IN CSS ARE ACCESSED BY
 1.TAG NAME
 2.ID VALUE
 3.CLASS VALUE
+==========================================================================================
+DATE:30.07.2025
+============================================================================================
+BOOTSTRAP
+===============================================================================
+BOOTSRAP IS POWERFUL,EXTENSIBLE,SELF PACKED FROND END TOOL
+PURPOSE
+=======================================
+FASTER AND RESPONSIVE DESIGN
+JAVASCRIPT
+================================================================================
+JAVASCRIPT IS A PROGRAMMING LANGUAGE.JAVASCRIPT CAN COMMUNICATE WITH DATABASE
+AND ALSO WEBSERVER AND APPLICATION SERVER.
+PURPOSE
+==================================================
+1.DYNAMIC USER ITERFACE
+2.CLIENT SIDE AND SERVER SIDE VALIDATION
+3.COMMUNICATE WITH FRONT END AND BACK END APPLICATION
+AREAS
+=====================================================
+1.BUIDING STAND ALONE OR DESKTOP APPLICATION
+2.WEB APPLICATION
+3.ML APPS
+4.MOBILE APPS
+==============================================================
+DATA TYPES
+=============================================================
+PRIMITIVE TYPES:NUMBER,STRING,BOOLEAN,BIGINT,UNDEFINED,NULL,SYMBOL
+NON PRIMITIVE TYPE:OBJECT
+=======================================================================
+VARIABLE
+==================================================================
+VAR,LET,CONST
+===============================================================
+FUNCTION
+====================================================================
+1.NORMAL OR CONCRETE FUNCTION
+2.PARAMETERISED FUNCTION
+3.ANNONYMOUS FUNCTION
+4.HIGHER ORDER FUNCTION
+5.CALL BACK FUNCTION
+ FUNCTION EXPRESSION
+=============================================================
+ARRAY
+OBJECT
+============================================================
+EVENT HANDELLING
+================================================================
+DOM 
+==================================================================
+DOCUMENT OBJECT MODEL
+HTML ELEMENT ARE CONVERTED INTO OBJECTS(NODES) WHEN IT FORM TREE LIKE
+DATASTRUCTURE THEN IT IS CALLED DOM.
+
+HTML ELEMENT===BROWSER ENGINE===BYTES===TOKENS=====OBJECT(CALLED NODES)
+NODES ARE REPRESENTED INTO TREE LIKE DATASTRUCTURE IS CALLED DOM.
+
+
+
+
+
+
 
 
 

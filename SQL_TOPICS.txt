@@ -1,0 +1,45 @@
+SQL
+=====================================================
+CREATE TABLE WITHOUT CONSTRAINTS
+PRIMARY KEY NOT NULL IMPLEMENTATION
+FOREIGN KEY IMPLEMENTATION
+ALL DATA
+SPECIFIC COLUMN DATA
+RESTRICTION OF DATA
+ARITHMETIC OPERATOR
+COLUMN ALIAS
+IN OPERATOR
+NOT IN 
+AND OPERATOR
+OR OPERATOR
+LIKE OPERATOR
+ORDER BY
+LIMIT
+JOINING DATA
+VIEW 
+AUTO_INCREMENT
+DEFAULT TODAY'S DATE
+DELETE
+UPDATE
+==========================================================================
+mysql> CREATE TABLE ORDER_DTLS
+    -> (OID INT PRIMARY KEY AUTO_INCREMENT,
+    -> ODT  DATE DEFAULT (CURRENT_DATE()),
+    -> PNAME VARCHAR(25));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO ORDER_DTLS(PNAME) VALUES('TV');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> INSERT INTO ORDER_DTLS(PNAME) VALUES('TAB');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> SELECT * FROM ORDER_DTLS;
++-----+------------+-------+
+| OID | ODT        | PNAME |
++-----+------------+-------+
+|   1 | 2025-07-30 | TV    |
+|   2 | 2025-07-30 | TAB   |
++-----+------------+-------+
+2 rows in set (0.00 sec)
+==============================================================================
