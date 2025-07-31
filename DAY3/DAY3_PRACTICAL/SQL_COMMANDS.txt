@@ -1,0 +1,188 @@
+SHOW DATABASES;
+CREATE DATABASE JEEDBST;
+USE JEEDBST;
+SHOW TABLES;
+CREATE TABLE CUSTOMER
+(CID VARCHAR(10),
+ CNAME VARCHAR(25),
+ CPHNO VARCHAR(10)
+);
+DESC CUSTOMER;
+mysql> DESC CUSTOMER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| CID   | varchar(10) | YES  |     | NULL    |       |
+| CNAME | varchar(25) | YES  |     | NULL    |       |
+| CPHNO | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+INSERT INTO CUSTOMER VALUES('C1','ARUP','343443');
+SELECT * FROM CUSTOMER;
+CREATE TABLE EMP
+(EID VARCHAR(10),
+ ENAME VARCHAR(25) NOT NULL,
+ JOB   VARCHAR(25),
+ SAL   DECIMAL,
+ COMM  DECIMAL,
+ HIREDATE DATE,
+ DEPTNO   VARCHAR(10),
+ CONSTRAINT EMP_EID_PK PRIMARY KEY(EID)
+);
+DESC EMP;
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+SELECT * FROM EMP;
+INSERT INTO EMP VALUES('E1','SUMAN','CLERK',25000,2000,CURRENT_DATE,'10');
+INSERT INTO EMP VALUES('E2','ALOKE','CLERK',27000,2500,CURRENT_DATE,'20');
+INSERT INTO EMP VALUES('E3','AYAN','MANAGER',50000,5000,'2024-07-25','10');
+INSERT INTO EMP VALUES('E4','JAYANTA','MANAGER',80000,10000,'2024-06-24','20');
+INSERT INTO EMP VALUES('E5','JYOTI','ANALYST',65000,4000,'2024-05-20','30');
+INSERT INTO EMP VALUES('E6','RUPALI','ANALYST',60000,4500,'2024-05-15','20');
+
+mysql> SELECT * FROM EMP;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-07-31 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-07-31 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
++-----+---------+---------+-------+-------+------------+-------
+1.ALL DATA
+ SELECT * FROM EMP;
+2.SPECIFIC COLUMN
+ SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+WHERE CLAUSE
+SELECT * FROM EMP WHERE ENAME='SUMAN';
+SELECT * FROM EMP WHERE  JOB='CLERK';
+IN OPERATOR
+SELECT * FROM EMP WHERE JOB IN('CLERK','MANAGER');
+SELECT * FROM EMP WHERE JOB NOT IN('CLERK','MANAGER');
+
+mysql> SELECT * FROM EMP WHERE  JOB='CLERK';
++-----+-------+-------+-------+------+------------+--------+
+| EID | ENAME | JOB   | SAL   | COMM | HIREDATE   | DEPTNO |
++-----+-------+-------+-------+------+------------+--------+
+| E1  | SUMAN | CLERK | 25000 | 2000 | 2025-07-31 | 10     |
+| E2  | ALOKE | CLERK | 27000 | 2500 | 2025-07-31 | 20     |
++-----+-------+-------+-------+------+------------+--------+
+AND OPERATOR
+============================================================
+SELECT * FROM EMP WHERE  JOB='CLERK AND SAL >25000;
+SELECT * FROM EMP WHERE  JOB='CLERK' OR SAL >25000;
+SEARCHING PURPOSE
+=====================================================================
+LIKE OPERATOR
+====================================================================
+ENAME STARTING WITH S
+SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+SELECT * FROM EMP WHERE ENAME LIKE '_A%';
+LAST LETTER IS I
+SELECT * FROM EMP WHERE ENAME LIKE '%I';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+ARITHMETIC OPERATOR
+=======================================================================
++ - * /
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM TOTALSAL FROM EMP;  COLUMN ALIAS
+SORTING DATA
+============================================================================
+SELECT * FROM EMP ORDER BY ENAME;
+SELECT * FROM EMP ORDER BY SAL DESC;
+
+mysql> SELECT * FROM EMP ORDER BY SAL DESC;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-07-31 | 20     |
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-07-31 | 10     |
++-----+---------+---------+-------+-------+------------+--------+
+SELECT * FROM EMP ORDER BY SAL DESC LIMIT 2;
+CREATE TABLE DEPT
+(DEPTNO VARCHAR(10),
+ DNAME  VARCHAR(25) NOT NULL,
+ LOC    VARCHAR(25) NOT NULL,
+ CONSTRAINT DEPT_DEPTNO_PK PRIMARY KEY(DEPTNO)
+);
+ DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+INSERT INTO DEPT VALUES('10','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('20','FINANCE','MUMBAI');
+INSERT INTO DEPT VALUES('30','IT','DELHI');
+INSERT INTO DEPT VALUES('40','OPERATIONS','CHENNAI');
+mysql> SELECT * FROM DEPT;
++--------+------------+---------+
+| DEPTNO | DNAME      | LOC     |
++--------+------------+---------+
+| 10     | MKTG       | KOLKATA |
+| 20     | FINANCE    | MUMBAI  |
+| 30     | IT         | DELHI   |
+| 40     | OPERATIONS | CHENNAI |
++--------+------------+---------+
+4 rows in set (0.00 sec)
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+UPDATE TABLE
+===========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

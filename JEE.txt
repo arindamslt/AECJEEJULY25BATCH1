@@ -28,13 +28,13 @@ https://getbootstrap.com/docs/4.0/content/tables/
 SERVLET FILTER
 ======================================================================
  <filter>
-      <filter-name>FlFilter</filter-name>
-      <filter-class>com.arindam.FlFilter</filter-class>
+      <filter-name>CustomerFilter</filter-name>
+      <filter-class>master.filter.CustomerFilter</filter-class>
   </filter>
    
   <filter-mapping>
-      <filter-name>FlFilter</filter-name>
-      <url-pattern>/FlServe</url-pattern>
+      <filter-name>CustomerFilter</filter-name>
+      <url-pattern>/CustomerServe</url-pattern>
   </filter-mapping>
 =============================================================================
 JSTL

@@ -141,6 +141,159 @@ NODES ARE REPRESENTED INTO TREE LIKE DATASTRUCTURE IS CALLED DOM.
 ============================================================
 DATE:31.07.2025
 ====================================================================
+DBMS
+======================================
+DATABASE MANAGEMENT SYSTEM
+RDBMS
+======================================
+RELATIONAL DATABASE MANAGEMENT SYSTEM
+DATABASE
+=======================================
+DATABASE IS COLLECTION INTERELATED TABLES OR DATA
+ADVANTAGE DBMS OR RDBMS
+===================================
+1.MINIMIZE DATA REDUNDENCY
+2.SECURITY RESTRICTION IS THERE
+3.DATA CAN BE SHARED
+4.INTEFRITY CONSTRAINT TO BE MAINTAINED
+RDBMS
+=============================
+DATABASE+SQL(STRUCTED QUERY LANGUAGE)
+C++,JAVA====HLL(3RD GL)
+HOW PART
+WHAT PART
+SQL==4GL
+     NON PROCEDURAL LANGUAGE
+  SELECT * FROM STUDENT;
+WHAT PART IS KNOWN TO US
+HOW PART IS NOT KNOWN TO US
+PL/SQL
+RDBMS KIND SOFTWARE
+=========================
+ORACLE
+SQLSERVER
+MYSQL
+
+SQL  COMMAND
+============================================================
+1.DDL==DATA DEFINATION LANGUAGE
+        CREATE,ALTER,RENAME,TRUNCATE,DROP,PURGE
+2.DML==DATA MANIPULATION LANGUAGE
+        INSERT,UPDATE,DELETE,MERGE
+3.DATA RETRIEVAL
+    SELECT
+4.TCL==TRANSACTION CONTROL LANGUAGE
+        COMMIT,ROLLBACK,SAVEPOINT
+5.DCL==DATA CONTROL LANGUAGE
+       GRANT,REVOKE
+=======================================================================
+MYSQL DATA TYPE
+====================================================================
+VARCHAR
+CHAR
+NUMBER
+INT
+DECIMAL
+DATE
+TIMESTAMP
+
+SNAME CHAR(25)
+ ALOKE
+SNAME VARCHAR(25)
+NUMBER(5)===99999
+NUMBER(7,2)===99999.99
+DATE==YYYY-MM-DD
+CONSTRAINTS
+===================================
+BEFORE INSERTING DATA INTO TABLE YOU HAVE TO SATISFY CERTAIN RULES AND REGULATION
+1.PRIMARY KEY==IT CAN'T ACCEPT NULL VALUE AS WELL AS DUPLICATE VALUE
+2.NOT NULL===IT CAN'T ACCEPT NULL VALUE
+3.UNIQUE KEY== IT  ACCEPT NULL VALUE BUT CAN'T ACCEPT DUPLICATE VALUE
+
+4.FOREIGN KEY
+5.CHECK CONSTRAINT===IT SUPPORT PREDEFINED VALUES
+=======================================================================
+LOGIN IN MYSQL
+=====================================================================
+1.COMMAND PROMPT
+2.MYSQL COMMAND LINE CLIENT
+3.MYSQL WORKBENCH
+=========================================================================
+JDBC
+===========================================================================
+JAVA DATABASE CONNECTIVITY
+TYPES OF JDBC DRIVER
+======================================================
+1.TYPE-I DRIVER
+2.TYPE-II DRIVER
+3.TYPE-III DRIVER
+4.TYPE-IV DRIVER
+==================================================================================
+WE HAVE TO IMPORT java.sql.* PACAKE
+java.sql.*====SET OF CLASSES AND SET OF INTERFACES
+import java.sql.*'
+LIST OF INTERFACES
+==========================================
+Connection ==TO ESTABLISH CONNECTION
+Statement=====EXECUTE THE QUERY
+PreparedStatement===PRECOMPILED SQL STATEMENT
+CallableStatement====CALL STORED PROCEDURE
+ResultSet=============STORE THE DATA INTO RESULTSET
+ResultsetMataData=====DETAILS OF RESULTSET
+DatabaseMetadata=======DETAILS OF DATABASE
+CLASSES
+============================================
+DriverManager===REGISTER AND LOAD THE JDBC DRIVER
+DATE===DEALS WITH DATE
+TIMESTAMP===DEALS WITH DATE AND TIME
+=================================================
+EXCEPTION HANDLE HERE
+==================================================
+ClassNotFoundException
+SQLException
+========================================================
+MySQL
+USERNAME:root
+PASSWORD:arindam
+PORT NUMBER:3306
+============================================================
+DATABASE:DBJEE
+TABLE:PRODUCT
+ PID VARCHAR  10  PK
+ PNAME VARCHAR  25 NOT NULL
+ PQTY  INT
+ PRICE DECIMAL
+=================================================================
+CREATE DATABASE DBJEE;
+USE DBJEE;
+CREATE TABLE PRODUCT
+(PID VARCHAR(10),
+ PNAME VARCHAR(25) NOT NULL,
+ PQTY  INT,
+ PRICE DECIMAL,
+ CONSTRAINT PRODUCT_PID_PK PRIMARY KEY(PID)
+);
+DESC PRODUCT;
+INSERT INTO PRODUCT VALUES('P1','TV',5,25000.00);
+INSERT INTO PRODUCT VALUES('P2','MOBILE',12,12000);
+SELECT * FROM PRODUCT;
+==========================================================================
+STEPS OF COMMUNICATION
+=================================================================
+1.import java.sql.*;
+2.REGISTER AND LOAD THE JDBC DRIVER
+3.ESTABLISH THE CONNECTION
+4.CREATE THE STATEMENT
+5.EXECUTE QUERY
+6.RETRIEVE DATA INTO RESULTSET
+7.CLOSE STATEMENT AND CONNECTION
+
+
+
+
+
+
+
 
 
 
