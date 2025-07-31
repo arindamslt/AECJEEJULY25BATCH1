@@ -138,6 +138,9 @@ DATASTRUCTURE THEN IT IS CALLED DOM.
 
 HTML ELEMENT===BROWSER ENGINE===BYTES===TOKENS=====OBJECT(CALLED NODES)
 NODES ARE REPRESENTED INTO TREE LIKE DATASTRUCTURE IS CALLED DOM.
+============================================================
+DATE:31.07.2025
+====================================================================
 
 
 
