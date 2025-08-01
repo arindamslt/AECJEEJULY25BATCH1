@@ -288,10 +288,83 @@ STEPS OF COMMUNICATION
 6.RETRIEVE DATA INTO RESULTSET
 7.CLOSE STATEMENT AND CONNECTION
 
+DATE:01.08.2025
+============================================================================
 
-
-
-
+JEE
+=============================
+JAVA ENTERPRISE EDITION
+ARCHITECURE OF PROJECT
+==========================================================================
+1.TWO TIER APPLICATION
+2.THREE TIER APPLICATION
+3.n-TIER APPLICATION
+JEE SUPPORT n-TIER  ARCHITECTURE
+SERVLET
+JSP
+================================================================
+SERVLET
+================================================================
+SERVER SIDE PROGRAM.
+REQUEST REPONSE ORIENTED PROGRAM
+SERVER ACT AS AN CONTROLLER
+SERVLET IS A NORMAL JAVA CLASS
+import javax.servlet.*;
+import javax.servlet.http.*;
+ SERVLET LIFE CYCLE
+========================================
+init()
+service()
+destroy()
+localhost:8080/ServletDemo/Employee.html
+=============================================
+GET           VS             POST
+==============================================
+1.INSURED                  1.SECURED
+2.DATA EMBEDDED IN URL     2.DATA NOT EMBEDDED IN URL
+3.AMOUNT OF DATA           3.ANY DATA CAN BE SEND
+ SENDING RESTRICTED
+============================================================================
+SERVLET TO SERVLET COMMUNICATION
+==============================================================================
+JSP
+=============================
+JAVA SERVER PAGES
+IT IS USED FOR VIEW PURPOSE
+HTML===HTML DOES NOT SUPPORT JAVA CODE
+JSP==HTML+JAVA CODE
+<%   %>===SCRIPLET
+<% =  %>====EXPRESSION
+<%
+ int x=10;
+%>
+<p>
+JSP IS NOTHING BUT ANOTHER FORM OF SERVLET
+Test.jsp===compile===Test_jsp.java===compile==Test_jsp.class===o/p
+                      (Servlet)
+LIFE CYCLE JSP
+================================================
+jspinit()
+jspservice(HttpServletRequest request,HttpServletResponse response)
+jspdestroy()
+ALL THE JSP ARE PLACED IN webapp FOLDER
+DYNAMIC WEB PROJECT
+=================================
+JSPDEMO
+PATH WHERE JSP CONVERTED TO SERVLET
+======================================================================================
+C:\JEEJULYB2025ACTH1PRACTICAL\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\JSPDEMO\org\apache\jsp
+==============================================================================================
+JSP TO JSP COMMUNICATION
+===============================================================================================
+JSP ACTION TAG
+===========================================================================
+<jsp:include>
+<jsp:forward>
+<jsp:useBean>
+<jsp:setproperty>
+<jsp:getProperty>
+<jsp:param>
 
 
 

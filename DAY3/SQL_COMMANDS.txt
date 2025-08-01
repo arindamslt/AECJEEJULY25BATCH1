@@ -169,6 +169,14 @@ mysql> DESC DEPT;
 | LOC    | varchar(25) | NO   |     | NULL    |       |
 +--------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
 UPDATE TABLE
 ===========================================================================
 UPDATE DEPT SET DNAME='HR',LOC='PUNE' WHERE DEPTNO='40';
@@ -252,14 +260,6 @@ SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
 FROM EMP E,DEPT D
  WHERE E.DEPTNO=D.DEPTNO;
 SELECT * FROM EMP_DEPT_VW;
-
-
-
-
-
-
-
-
 
 
 
