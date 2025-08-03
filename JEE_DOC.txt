@@ -366,12 +366,65 @@ JSP ACTION TAG
 <jsp:getProperty>
 <jsp:param>
 
+IMPLICIT OBJECTS
+=========================
+1.request
+2.response
+3.session
+4.application
+5.pageContext
+6.page
+7.jspWriter
+8.Exception
+9.out
+====================================
 
+DATE:02.08.2025
+=======================================================================================
+JSP ACTION TAG
+======================================================================================
+<jsp:include>
+<jsp:forward>
+<jsp:useBean>
+<jsp:setproperty>
+<jsp:getProperty>
+<jsp:param>
+<jsp:forward>
+<jsp:param>
+</jsp:forward>
 
-
-
-
-
+JSP ERROR HANDELLING
+==============================================================================
+ 
+JSP TO JSP PAGE COMMUNICATION CAN BE DONE BY
+=============================================================================
+THREE WAYS
+1.CALLING A JSP PAGE
+2.<use:Bean>
+3.JSTL
+==============================================================================
+JSTL
+======================================================================
+JAVA SERVER PAGES STANDARD TAG LIBRARY
+TYPES OF TAG IN JSTL
+===================================================================
+1.CORE TAG
+=====================================================================
+<c:out>====PRINTING THE VALUE
+<c:forEach>===USING FOREACH LOOP
+2.SQL TAG
+3.FORMATTING TAG
+4.XML TAG
+==============================================================================
+SESSION MANAGEMENT
+===============================================================================
+IT CAN BE DONE IN FOUR WAYS
+=====================================
+1.URL REWRITTING
+2.SESSION
+3.INPUT FROM HIDDEN FIELDS
+4.COOKIES
+================================================================
 
 
 

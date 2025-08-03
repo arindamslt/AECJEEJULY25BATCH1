@@ -1,15 +1,21 @@
 package master;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class ConnectionFactory {
-private Connection cn=null;
+	private Connection cn=null;
 public Connection getConn()
 {
 	try
 	{
-	 Class.forName("com.mysql.cj.jdbc.Driver");
-	 cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/db2","root","arindam");
-	 
+	Class.forName("com.mysql.cj.jdbc.Driver");//REGISTER AND LOAD THE JDBC DRIVER
+	//ESTABLISH THE CONNECTION
+	 cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/DBJEE","root","arindam");
+	
 	}
+	
 	catch(ClassNotFoundException ce)
 	{
 		ce.printStackTrace();
@@ -19,5 +25,7 @@ public Connection getConn()
 		se.printStackTrace();
 	}
 	return cn;
+
+
 }
 }
