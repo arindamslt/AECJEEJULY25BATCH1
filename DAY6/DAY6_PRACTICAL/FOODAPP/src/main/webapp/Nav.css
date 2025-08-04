@@ -1,0 +1,23 @@
+body{
+	margin:0px;
+}
+#main{
+	display: flex;
+}
+#lft{
+	background-color: black;
+	color: white;
+	width:30%;
+	text-align: center;
+}
+#rgt{
+	display: flex;
+	background-color: black;
+	color: white;
+	width:70%;
+	a{
+		color:white;
+		text-decoration: none;
+		margin:20px auto;
+	}
+}

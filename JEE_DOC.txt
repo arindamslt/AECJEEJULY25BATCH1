@@ -425,9 +425,41 @@ IT CAN BE DONE IN FOUR WAYS
 3.INPUT FROM HIDDEN FIELDS
 4.COOKIES
 ================================================================
-
-
-
+DATE:04.08.2025
+==========================================================================================
+DESIGN PATTERN
+============================================================
+WELL APPROVED SOLUTION
+MVC DESIGN PATTERN 
+M==MODEL
+V==VIEW
+C=CONTROLLER
+JEE PROJECT USING DAO DTO DESIGN PATTERN
+=====================================================
+CREATE DATABASE DBFOODAPP;
+USE DBFOODAPP;
+CREATE TABLE FOOD
+(FID  VARCHAR(10),
+ FNAME VARCHAR(25) NOT NULL,
+ PRICE DECIMAL,
+ CONSTRAINT FOOD_FID_PK PRIMARY KEY(FID)
+);
+DESC FOOD;
+=========================================================
+mysql> DESC FOOD;
++-------+---------------+------+-----+---------+-------+
+| Field | Type          | Null | Key | Default | Extra |
++-------+---------------+------+-----+---------+-------+
+| FID   | varchar(10)   | NO   | PRI | NULL    |       |
+| FNAME | varchar(25)   | NO   |     | NULL    |       |
+| PRICE | decimal(10,0) | YES  |     | NULL    |       |
++-------+---------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+============================================================================
+CREATE A DYNAMIC WEB PROJECT
+PROJECT NAME:FOODAPP
+WEBAPP==WEB-INF===LIB===MYSQL.JAR FILE
+=============================================================================
 
 
 
