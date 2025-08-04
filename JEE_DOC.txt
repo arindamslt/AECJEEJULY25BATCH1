@@ -434,6 +434,13 @@ MVC DESIGN PATTERN
 M==MODEL
 V==VIEW
 C=CONTROLLER
+DAO DTO DESIGN PATTERN
+==================================================================
+DAO DTO DESIGN PATTERN BASED ON MVC PATTERN
+
+DAO===DATA ACCESS OBJECT
+DTO===DATA TRANSFER OBJECT
+====================================================================
 JEE PROJECT USING DAO DTO DESIGN PATTERN
 =====================================================
 CREATE DATABASE DBFOODAPP;
