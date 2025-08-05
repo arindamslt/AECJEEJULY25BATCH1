@@ -467,6 +467,36 @@ CREATE A DYNAMIC WEB PROJECT
 PROJECT NAME:FOODAPP
 WEBAPP==WEB-INF===LIB===MYSQL.JAR FILE
 =============================================================================
+DATE:05.08.2025
+=================================================================================
+USE DBFOODAPP;
+CREATE TABLE REGISTER
+(UNAME VARCHAR(15),
+ PASS  VARCHAR(10) NOT NULL,
+ NM     VARCHAR(25) NOT NULL,
+CONSTRAINT REGISTER_UNAME_PK PRIMARY KEY(UNAME)
+);
+=====================================================================================
+mysql> DESC REGISTER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| UNAME | varchar(15) | NO   | PRI | NULL    |       |
+| PASS  | varchar(10) | NO   |     | NULL    |       |
+| NM    | varchar(25) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+=========================================================================================
+CHECKING USER NAME AND PASSWORD
+SELECT * FROM REGISTER WHERE UNAME='suman123' and pass='12345';
+==========================================================================================
+
+String check_sql="select * from register where uname='"+uname+"' and pass='"+pass+"'";
+===========================================================================================
+
+
+
+
 
 
 
